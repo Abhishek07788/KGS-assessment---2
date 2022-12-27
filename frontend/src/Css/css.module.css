@@ -84,3 +84,32 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+
+/* ----------------- */
+@media all and (min-width: 0px) and (max-width: 800px) {
+  .heading {
+    font-size: 30px;
+  }
+
+  .form {
+    width: 85%;
+  }
+
+  .form > label {
+    font-size: 20px;
+  }
+
+  .form > input {
+    width: 76%;
+    height: 25px;
+    font-size: 16px;
+  }
+
+  .table {
+    width: 90%;
+  }
+
+  .form > button {
+    font-size: 15px;
+  }
+}

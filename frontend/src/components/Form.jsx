@@ -1,14 +1,48 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
-import style from "./css.module.css";
+import { getAllUrl, postNewUrl, redirectApi } from "../Api/api";
+import style from "../Css/css.module.css";
 
 const Form = () => {
   const [fullUrl, setFullUrl] = useState("");
+  const [data, setData] = useState([]);
 
+  // ------------ (Post New url) ---------
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(fullUrl);
+    postNewUrl(fullUrl)
+      .then((res) => {
+        showUrl();
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   };
+
+  // ------------- ( get ) -------------
+  useEffect(() => {
+    showUrl();
+  }, []);
+
+  //-------------- (get url) -----------
+  const showUrl = () => {
+    getAllUrl()
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
+// // ------------- (click) ------------------
+//   const handleClick = (value) => {
+//     redirectApi(value).then((res) => {
+//     }).catch((e)=>{
+//       console.log(e);
+//     })
+//   }
 
   return (
     <div>
@@ -36,22 +70,18 @@ const Form = () => {
           </tr>
         </thead>
         <tbody className={style.tbody}>
-          <tr>
-            <td>
-              <a href="www.google.com">www.google.com</a>
-            </td>
-            <td>
-              <a href="www.google.com">google</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="www.google.com">www.google.com</a>
-            </td>
-            <td>
-              <a href="www.google.com">google</a>
-            </td>
-          </tr>
+          {data &&
+            data.map((el) => (
+              <tr key={el._id}>
+                <td>
+                  <a href={el.fullUrl}>{el.fullUrl}</a>
+                </td>
+                <td>
+                  <a href={el.shortUrl}>
+                    {el.shortUrl}</a>
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
