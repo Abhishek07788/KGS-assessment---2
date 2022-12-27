@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+  background: rgba(169, 165, 165, 0.242);
+}

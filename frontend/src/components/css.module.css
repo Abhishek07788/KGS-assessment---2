@@ -1,0 +1,86 @@
+.heading {
+  color: teal;
+  font-size: 40px;
+}
+
+/* -------------- (Form) ----------- */
+
+.form {
+  width: 30%;
+  margin: auto;
+  text-align: left;
+  background: #f38260ba;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px;
+}
+
+.form > label {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.form > input {
+  width: 80%;
+  height: 30px;
+  font-size: 18px;
+  color: black;
+  border-radius: 10px;
+}
+
+.form > button {
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 4px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: teal;
+  border-color: transparent;
+  color: #ffff;
+}
+
+.form > button:hover {
+  background: rgb(57, 56, 56);
+  color: #ffff;
+}
+
+/* ----------------------- */
+
+.table {
+  margin: auto;
+  margin-top: 30px;
+  width: 60%;
+  border-radius: 10px;
+  border: 1px solid;
+  text-align: left;
+}
+
+.thead {
+  border: 1px solid;
+  background: teal;
+  color: #ffff;
+  font-size: 20px;
+}
+
+.thead > tr > th {
+  padding: 8px;
+}
+
+.tbody {
+  font-size: 18px;
+  background: #f8e7ef;
+}
+
+.tbody > tr:nth-child(even):hover {
+  background: rgba(108, 98, 98, 0.217);
+  font-size: 18px;
+}
+
+.tbody > tr > td {
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-bottom: 1px solid;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
