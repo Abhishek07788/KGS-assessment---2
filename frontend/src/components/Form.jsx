@@ -36,7 +36,7 @@ const Form = () => {
       });
   };
 
-// // ------------- (click) ------------------
+// // ------------- (click) -----------------
 //   const handleClick = (value) => {
 //     redirectApi(value).then((res) => {
 //     }).catch((e)=>{
