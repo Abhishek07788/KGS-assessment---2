@@ -2,15 +2,15 @@ import axios from "axios";
 
 // ------------- (get all url) ---------
 export const getAllUrl = () => {
-  return axios.get("http://localhost:8080/url");
+  return axios.get("https://kgs-45o2.onrender.com/");
 };
 
-// ------------- (post url) ------------
+// ------------- (post new url) ------------
 export const postNewUrl = (cred) => {
-  return axios.post("http://localhost:8080/url", { fullUrl: cred });
+  return axios.post("https://kgs-45o2.onrender.com/", { fullUrl: cred });
 };
 
-// --------- (redirectApi url) ---------
-export const redirectApi = (shortUrl) => {
-  return axios.get(`http://localhost:8080/url/${shortUrl}`);
+// ------------- (delete url) ------------
+export const deleteUrl = (id) => {
+  return axios.delete(`https://kgs-45o2.onrender.com/${id}`);
 };

@@ -2,10 +2,10 @@ const mongoose = require("mongoose");
 
 //  ----------- (generate short url) ------------
 const generateShortUrl = () => {
-  let words = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+  let words = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*";
   let bag = "";
-  for (let i = 0; i < 8; i++) {
-    bag += words[Math.floor(0 + Math.random() * 62)];
+  for (let i = 0; i < 5; i++) {
+    bag += words[Math.floor(0 + Math.random() * 70)];
   }
   return bag;
 };
