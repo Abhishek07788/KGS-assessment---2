@@ -91,7 +91,7 @@ const Form = () => {
         <input
           onChange={(e) => setFullUrl(e.target.value)}
           required
-          type="search"
+          type="url"
           placeholder="Enter url..."
         />
         <button type="submit">Generate</button>
